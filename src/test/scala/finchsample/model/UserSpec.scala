@@ -11,11 +11,11 @@ class UserSpec extends Specification {
     "create ~ create ~ find ~ all" in {
       val firstId = User.create("abc@abc","abc")
 
-      Await.result(firstId) must_=== 0L
+      Await.result(firstId).id must_=== 0L
 
       val secondId = User.create("def@def", "def")
 
-      Await.result(secondId) must_=== 1L
+      Await.result(secondId).id must_=== 1L
 
       val findUser = User.find(0L)
       val userOp = Await.result(findUser)

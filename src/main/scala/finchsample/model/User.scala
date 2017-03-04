@@ -32,11 +32,11 @@ object User {
     }
   }
 
-  def create(email: String, name: String): Future[Long] = Future {
+  def create(email: String, name: String): Future[User] = Future {
     users.synchronized {
       val id = if (users.isEmpty) 0 else users.keys.max + 1
       users(id) = User(id, email, name)
-      id
+      users(id)
     }
   }
 
