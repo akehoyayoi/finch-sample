@@ -17,3 +17,7 @@ libraryDependencies ++= Seq(
 )
 
 enablePlugins(JavaAppPackaging)
+
+dockerBaseImage in Docker := "java:8-jdk-alpine"
+
+dockerExposedPorts in Docker := Seq(8081, 8081)
