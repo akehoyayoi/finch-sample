@@ -13,6 +13,6 @@ object Main extends UserAPI with EchoAPI {
   val api: Service[Request, Response] = (userAPI :+: echoAPI) toService
 
   def main(args: Array[String]): Unit = {
-    Await.ready(Http.serve(":8081", api))
+    Await.ready(Http.serve(":8080", api))
   }
 }

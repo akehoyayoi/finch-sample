@@ -20,4 +20,4 @@ enablePlugins(JavaAppPackaging)
 
 dockerBaseImage in Docker := "java:8-jdk-alpine"
 
-dockerExposedPorts in Docker := Seq(8081, 8081)
+dockerExposedPorts in Docker := Seq(8080, 8080)
