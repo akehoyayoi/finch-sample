@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "com.github.finagle" %% "finch-core" % "0.13.1",
   "com.github.finagle"  %% "finch-argonaut"  % "0.13.1",
   "com.github.finagle" %% "finch-circe" % "0.13.1",
-  "com.twitter" %% "twitter-server" % "1.27.0",
+  "com.twitter" %% "finagle-mysql" % "6.42.0",
   "com.netaporter" %% "scala-uri" % "0.4.16",
   "io.circe" %% "circe-generic" % "0.7.0",
 

@@ -1,11 +1,10 @@
-package finchsample.model
-
-import com.twitter.util.Future
-
-import scala.collection.mutable
+package finchsample.model.database.mock
 
 import argonaut.Argonaut._
 import argonaut.CodecJson
+import com.twitter.util.Future
+
+import scala.collection.mutable
 
 /**
   * Created by okayayohei on 2017/02/28.

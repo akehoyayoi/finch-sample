@@ -1,6 +1,7 @@
 package finchsample.api
 
-import finchsample.model.User
+import finchsample.model.database.mock.User
+import finchsample.model.http.request.UserParams
 import io.circe.generic.auto._
 import io.finch._
 import io.finch.circe._
@@ -9,8 +10,6 @@ import io.finch.circe._
   * Created by okayayohei on 2017/03/04.
   */
 trait UserAPI {
-
-  case class UserParams(email: String, name: String)
 
   // cannot use private
   val createUser: Endpoint[User] = post("users" :: jsonBody[UserParams]) { userParams: UserParams =>

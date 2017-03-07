@@ -1,6 +1,7 @@
 package finchsample.model
 
 import com.twitter.util.Await
+import finchsample.model.database.mock.User
 import org.specs2.mutable.Specification
 
 /**
