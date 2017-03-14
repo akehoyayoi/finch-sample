@@ -30,10 +30,9 @@ object User {
     }
 
   def convertToEntity(row: Row): User = {
-    val LongValue(id)            = row("id").get
-    val StringValue(email)       = row("email").get
-    val StringValue(screen_name) = row("screen_name").get
-
-    User(id, email, screen_name)
+    val LongValue(id)       = row("id").get
+    val StringValue(email)  = row("email").get
+    val StringValue(name)   = row("name").get
+    User(id, email, name)
   }
 }
