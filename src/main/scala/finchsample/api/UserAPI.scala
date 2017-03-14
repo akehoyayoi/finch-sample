@@ -1,15 +1,17 @@
 package finchsample.api
 
-import finchsample.model.database.mock.User
+import finchsample.model.database.mysql.User
 import finchsample.model.http.request.UserParams
 import io.circe.generic.auto._
 import io.finch._
 import io.finch.circe._
-
+import com.twitter.finagle.mysql.Client
 /**
   * Created by okayayohei on 2017/03/04.
   */
 trait UserAPI {
+
+  implicit def client: Client
 
   // cannot use private
   val createUser: Endpoint[User] = post("users" :: jsonBody[UserParams]) { userParams: UserParams =>
